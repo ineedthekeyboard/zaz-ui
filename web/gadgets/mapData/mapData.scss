@@ -1,0 +1,13 @@
+.gm-style-iw + div {
+    display: none;
+}
+.gm-style-iw {
+    text-align:center;
+}
+.gm-label {
+    text-align: left;
+    font-size: 14px;
+    .value {
+        font-weight: bold;
+    }
+}

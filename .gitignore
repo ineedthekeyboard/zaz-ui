@@ -1,0 +1,16 @@
+docs/
+node_modules/
+.idea/
+*.iml
+.svn/
+.vscode
+npm-debug.log
+/web/jsdocs
+/web/templates/hbs.js
+/web/widgets/**/*.css
+/web/gadgets/**/*.css
+/web/styles/**/*.css
+/web/pages/**/*.css
+/web/features/**/*.css
+/web/framework/**/*.css
+/npm-debug.log

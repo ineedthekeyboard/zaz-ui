@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Zaz UI Access</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <div>
+        <h1>Sorry</h1>
+        <p class="error">There was an error. Please <a href="login.html">LOGIN</a> again!</p>
+        <p>You will be taken to login page in 5 seconds.</a>
+    </div>
+</body>
+<script>
+    window.setTimeout(function() {
+        top.location = 'login.html';
+    }, 5000)
+</script>
+
+</html>

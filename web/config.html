@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zaz UI Configuration</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="config" style="opacity: 0;">
+        <div class="header">
+            <div class="title">Configuration Manager</div>
+            <div class="controls">
+                <div class="left">
+                    <div class="button" data-key="debug">Toggle Debug</div>
+                    <div class="button" data-key="mock">Toggle Mock</div>
+                    <div class="button" data-key="demo">Toggle Demo</div>
+                    <div class="button" data-key="sso">Toggle SSO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="vendor/require/require.js"></script>
+    <script>
+        require(['main.js?t=' + new Date().getTime()])
+    </script>
+</body>
+
+</html>

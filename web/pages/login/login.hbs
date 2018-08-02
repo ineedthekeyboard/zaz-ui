@@ -1,0 +1,43 @@
+{{#if main}}
+<div class="content">
+    <div class="title">
+        <span>Zaz</span>
+        <span class="ui">UI</span>
+        <span>Login</span>
+    </div>
+    <div class="gadget">
+        <div class="container">
+            <div class="controls">
+                <div class="controls-bar">
+                    <div class="search">
+                        <div class="searchbox">
+                            <input type="text" class="text" 
+                            placeholder="Search by id, name or role"/>
+                            <input type="button" class="clear" value="x" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid"></div>
+        </div>
+    </div>
+</div>
+{{/if}} 
+
+{{#if tile}}
+    <div class="left">
+        {{#switch data.role}}
+            {{#case "admin"}}
+                <div class="login-icon"><i class="material-icons md-light">account_box</i></div>
+            {{/case}}
+            {{#case "user"}}
+                <div class="login-icon"><i class="material-icons md-light">account_circle</i></div>
+            {{/case}}
+        {{/switch}}
+    </div>
+    <div class="right">
+        <div class="login-id">{{data.id}}</div>
+        <div class="login-name">{{data.firstName}}, {{data.lastName}}</div>
+    </div>
+    <div class="login-role">{{data.role}}</div>
+{{/if}} 

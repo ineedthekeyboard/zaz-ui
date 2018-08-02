@@ -1,0 +1,337 @@
+.zaz-effect {
+    position: relative;
+    overflow:hidden;
+    transform: perspective(1px) translateZ(0px);
+    display: inline-block;
+    vertical-align: middle;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--theme-color-o8);
+        transition-property: transform;
+        transition-duration: 300ms;
+        transition-timing-function: ease-out;
+        z-index: -1;
+    }
+    &.zaz-effect-bounce {
+        &::before {
+            transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+        }
+    }
+    &:hover, &:focus {
+        color: #fff;
+    }
+    &.zaz-effect-top-to-bottom {
+        &::before {
+            transform: scaleY(0);
+            transform-origin: top center;
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &.zaz-effect-bottom-to-top {
+        &::before {
+            transform: scaleY(0);
+            transform-origin: bottom center;
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &.zaz-effect-left-to-right {
+        &::before {
+            transform: scaleX(0);
+            transform-origin: left center;
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-right-to-left {
+        &::before {
+            transform: scaleX(0);
+            transform-origin: right center;
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-top-left-to-right {
+        &::before {
+            transform: scaleX(0);
+            transform-origin: left center;
+            bottom: inherit;
+            height: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-top-right-to-left {
+        &::before {
+            transform: scaleX(0);
+            bottom: inherit;
+            transform-origin: right center;
+            height: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-bottom-left-to-right {
+        &::before {
+            transform: scaleX(0);
+            transform-origin: left center;
+            top: inherit;
+            height: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-bottom-right-to-left {
+        &::before {
+            transform: scaleX(0);
+            top: inherit;
+            transform-origin: right center;
+            height: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-left-bottom-to-top {
+        &::before {
+            transform: scaleY(0);
+            transform-origin: left bottom;
+            right: inherit;
+            width: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-left-top-to-bottom {
+        &::before {
+            transform: scaleY(0);
+            right: inherit;
+            transform-origin: left top;
+            width: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-right-bottom-to-top {
+        &::before {
+            transform: scaleY(0);
+            transform-origin: right bottom;
+            left: inherit;
+            width: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-right-top-to-bottom {
+        &::before {
+            transform: scaleY(0);
+            left: inherit;
+            transform-origin: right top;
+            width: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-left {
+        &::before {
+            transform: scaleX(0);
+            transform-origin: left center;
+            right: inherit;
+            width: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-right {
+        &::before {
+            transform: scaleX(0);
+            transform-origin: right center;
+            left: inherit;
+            width: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-top {
+        &::before {
+            transform: scaleY(0);
+            transform-origin: left top;
+            bottom: inherit;
+            height: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &.zaz-effect-bar-bottom {
+        &::before {
+            transform: scaleY(0);
+            transform-origin: right bottom;
+            top: inherit;
+            height: 5px;
+        }
+        &:hover, &:focus {
+            color: inherit;
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+    &.zaz-effect-rec-out {
+        &::before {
+            transform: scale(0);
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scale(1);
+            }
+        }
+    }
+    &.zaz-effect-rec-in {
+        background: rgb(32, 152, 209);
+        &::before {
+            background: #fff;
+            transform: scale(1);
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scale(0);
+            }
+        }
+    }
+    &.zaz-effect-circle-out {
+        &::before {
+            border-radius: 100%;
+            transform: scale(0);
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scale(2);
+            }
+        }
+    }
+    &.zaz-effect-circle-in {
+        background: rgb(32, 152, 209);
+        transform: perspective(1px) translateZ(0px);
+        &::before {
+            background: #fff;
+            border-radius: 100%;
+            transform: scale(2);
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scale(0);
+            }
+        }
+    }
+    &.zaz-effect-curtain-close {
+        background: rgb(32, 152, 209);
+        transform: perspective(1px) translateZ(0px);
+        &::before {
+            background: #fff;
+            transform: scaleX(1);
+            transform-origin: 50%;
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scaleX(0);
+            }
+        }
+    }
+    &.zaz-effect-curtain-open {
+        &::before {
+            transform: scaleX(0);
+            transform-origin: 50%;
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    &.zaz-effect-eye-close {
+        background: rgb(32, 152, 209);
+        transform: perspective(1px) translateZ(0px);
+        &::before {
+            background: #fff;
+            transform: scaleY(1);
+            transform-origin: 50%;
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scaleY(0);
+            }
+        }
+    }
+    &.zaz-effect-eye-open {
+        &::before {
+            transform: scaleY(0);
+            transform-origin: 50%;
+        }
+        &:hover, &:focus {
+            &::before {
+                transform: scaleY(1);
+            }
+        }
+    }
+}

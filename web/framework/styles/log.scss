@@ -1,0 +1,54 @@
+.log {
+    background-color: #000;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    display: none;
+    margin: 10px;
+    right: 0;
+    top: 0;
+}
+
+.log .title {
+    background-color: #000;
+    font-weight: bold;
+    padding: 10px 0 5px 6px;
+    color: #fff;
+}
+
+.log .list {
+    background: none repeat scroll 0 0 #EEEEEE;
+    height: 400px;
+    margin: 5px;
+    overflow: auto;
+    width: 1000px;
+}
+
+.log .buttons {
+    padding: 0 4px 4px;
+    text-align: right;
+    overflow: hidden;
+}
+
+.log .button {
+    margin-right: 5px;
+    padding: 5px;
+}
+
+.log table tr:nth-child(odd) td {
+    background-color: #ddd;
+}
+
+.log table tr:nth-child(even) td {
+    background-color: #fff;
+}
+
+.log table tr.error td {
+    color: red;
+}
+
+.log td {
+    padding: 5px;
+    vertical-align: top;
+}

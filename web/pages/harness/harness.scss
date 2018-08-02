@@ -1,0 +1,20 @@
+.__harness {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 50px;
+    right: 50px;
+    .content {
+        flex: 1;
+        position: relative;
+        .gadget {
+            border: 1px solid #999;
+            margin: 0;
+            .message {
+                padding: 5px;
+            }
+        }
+    }
+}

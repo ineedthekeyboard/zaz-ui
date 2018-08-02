@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "cleverLinks": true,
+    "monospaceLinks": true,
+    "dateFormat": "ddd MMM Do YYYY",
+    "outputSourceFiles": true,
+    "outputSourcePath": false,
+    "systemName": "OC UI Docs",
+    "footer": "",
+    "copyright": "Copyright Zazvata Inc. 2017",
+    "navType": "vertical",
+    "theme": "spacelab",
+    "linenums": true,
+    "collapseSymbols": false,
+    "inverseNav": false,
+    "highlightTutorialCode": true,
+    "default": {}
+  },
+  "markdown": {
+    "parser": "gfm",
+    "hardwrap": false
+  }
+}

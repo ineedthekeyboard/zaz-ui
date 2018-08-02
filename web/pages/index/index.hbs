@@ -1,0 +1,85 @@
+{{#if mainbar}}
+    <div class="__mainbar">
+        <div class="left">
+            <div class="title" data-intro='This the main title of the web application'
+                    data-step="1" data-position="right">
+                <span>Zaz</span>
+                <span class="ui">UI</span>
+            </div>
+        </div>
+        <div class="right">
+            <div class="knobs">
+                <div tabindex="0" class="knob user" data-action="user" data-type="action" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons md-light">account_circle</i>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}} 
+
+{{#if toolbar}} 
+    <div class="standard">
+        <div class="left">
+            <div class="knobs" data-intro="Click here to open or reopen gadgets" data-step="2" data-position="left">
+                <div tabindex="0" class="knob"  data-action="mobile" data-type="action" role="button" tabindex="0" title="{{items.MOBILE-MODE}}">
+                    <i class="material-icons md-light">devices</i>
+                </div>
+                <div tabindex="0" class="knob"  data-gadget="sampleChart" data-type="gadget" role="button" tabindex="0" title="{{items.OPEN-APPLICATIONS-CHART}}"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons md-light icon-class icon-class-chart">insert_chart</i>
+                </div>
+                <div tabindex="0" class="knob"  data-gadget="mapData" data-type="gadget" role="button" tabindex="0" title="{{items.OPEN-APPLICATIONS-CHART}}"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons md-light icon-class icon-class-map">location_on</i>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="knobs" data-intro="Click here to view features" data-step="3" data-position="left">
+                <div tabindex="0" class="knob"  data-action="preferences" data-type="action" role="button" tabindex="0" title="{{items.PREFERENCES}}">
+                    <i class="material-icons md-light">settings</i>
+                </div>
+                <div tabindex="0" class="knob"  data-action="viewintro" data-type="action" role="button" tabindex="0" title="{{items.VIEW-INTRODUCTION}}">
+                    <i class="material-icons md-light">school</i>
+                </div>
+                <div tabindex="0" class="knob"  data-action="about" data-type="action" role="button" tabindex="0" title="{{items.ABOUT}}" aria-haspopup="true"
+                    aria-expanded="false">
+                    <i class="material-icons md-light">info</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mobile">
+        <div class="left">
+            <div class="knobs">
+                <div tabindex="0" class="knob"  data-action="user" data-type="action" role="button" tabindex="0">
+                    <div class="user" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                        <i class="material-icons md-light">account_circle</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="knobs">
+                <div tabindex="0" class="knob"  data-action="desktop" data-type="action" role="button" tabindex="0" title="{{items.DESKTOP-MODE}}">
+                    <i class="material-icons md-light">devices</i>
+                </div>
+                <div tabindex="0" class="knob"  data-action="gadgets" data-type="action" role="button" tabindex="0" title="{{items.OPEN-GADGETS-MENU}}"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="material-icons md-light">picture_in_picture</i>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}} 
+
+{{#if usermenu}}
+    <div class="zaz-menu usermenu" aria-hidden="true">
+        <div class="items" role="menu">
+            {{#if switchUser}}
+                <div class="item" role="menuitem" tabindex="0" data-action="switchuser">{{items.SWITCH-USER}}</div>
+            {{/if}}
+            <div class="item" role="menuitem" tabindex="0" data-action="preferences">{{items.PREFERENCES}}</div>
+        </div>
+    </div>
+{{/if}}

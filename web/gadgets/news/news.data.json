@@ -1,0 +1,115 @@
+{
+  "status": "ok",
+  "totalResults": 10,
+  "articles": [{
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Megan Rose Dickey",
+    "title": "Uber and Lyft encourage NYC customers to oppose proposed ride-hail cap legislation",
+    "description": "Uber is making calls to some of its customers in New York City, offering to connect them to local council members to express their opposition to the proposed legislation that would cap the number of ride-hailing drivers in the city, Buzzfeed first reported. M…",
+    "url": "https://techcrunch.com/2018/07/31/uber-and-lyft-encourage-nyc-customers-to-oppose-proposed-ride-hail-cap-legislation/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/07/GettyImages-1007905058.jpg?w=587",
+    "publishedAt": "2018-07-31T23:19:07Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Greg Kumparak",
+    "title": "Four million people are using Apple's OS betas",
+    "description": "For the past few years, Apple has made early versions of its operating systems available to those willing to brave the bugs. Through its beta software program, anyone willing to deal with spotty battery life or a crash or three could load up pre-release build…",
+    "url": "https://techcrunch.com/2018/07/31/four-million-people-are-using-apples-os-betas/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/06/tim_apps_wwdc.jpg?w=613",
+    "publishedAt": "2018-07-31T22:09:56Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Sarah Perez",
+    "title": "Apple Pay is finally coming to CVS and 7-Eleven, and will soon expand to Germany",
+    "description": "Longtime Apple Pay holdout CVS will finally be adding support for Apple’s mobile payments platform this fall, along with 7-Eleven, Apple CEO Tim Cook said this afternoon on the company’s earnings call. The news is particularly notable because CVS was one of t…",
+    "url": "https://techcrunch.com/2018/07/31/apple-pay-is-finally-coming-to-cvs-and-7-eleven-and-will-soon-expand-to-germany/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2016/08/cvs.jpg?w=601",
+    "publishedAt": "2018-07-31T21:48:26Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Anthony Ha",
+    "title": "Spotify now offers motion comics starring Archie",
+    "description": "Spotify has been experimenting with incorporating non-musical formats over the last couple of years, including videos and multimedia podcasts. Next up: Motion comics based on new Archie stories. For those of you who haven’t been keeping track of the comics in…",
+    "url": "https://techcrunch.com/2018/07/31/spotify-archie-motion-comics/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/07/Archie-1-FionaStaplesRegCover-1e0ba.0.0.jpg?w=600",
+    "publishedAt": "2018-07-31T21:45:37Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Devin Coldewey",
+    "title": "DHS launches a new cyber hub to coordinate against threats to US infrastructure",
+    "description": "Among the many things the current administration has been criticized for is its lack of a unified strategy to combat cyber threats, especially in light of ongoing election interference and psy ops perpetrated by Russia. The Department of Homeland Security is …",
+    "url": "https://techcrunch.com/2018/07/31/dhs-launches-a-new-cyber-hub-to-coordinate-against-threats-to-us-infrastructure/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/06/GettyImages-622184706.jpg?w=600",
+    "publishedAt": "2018-07-31T21:10:22Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Matthew Lynley",
+    "title": "Apple nears a $1 trillion market cap as it clears another quarter ahead of expectations",
+    "description": "Apple is inching closer and closer to becoming a $1 trillion company today after posting third quarter results that beat out what analysts were expecting and bumping the stock another few percentage points — which, by Apple standards, is tens of billions of d…",
+    "url": "https://techcrunch.com/2018/07/31/apple-nears-a-1-trillion-market-cap-as-it-clears-another-quarter-ahead-of-expectations/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/01/gettyimages-846153794.jpg?w=572",
+    "publishedAt": "2018-07-31T20:45:15Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Sarah Perez",
+    "title": "TV Time debuts an analytics platform for the streaming era",
+    "description": "TV Time, the consumer app that helps bingers keep track of where they are with favorite shows and socialize with fellow viewers, is today expanding its business with the launch of an analytics platform called TVLytics. The new service will allow creators and …",
+    "url": "https://techcrunch.com/2018/07/31/tv-time-debuts-an-analytics-platform-for-the-streaming-era/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/03/tv-time.jpg?w=711",
+    "publishedAt": "2018-07-31T19:21:16Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Josh Constine",
+    "title": "Midterm attackers cited Black Lives Matter in false flag Facebook rally",
+    "description": "Unknown midterm election attackers that Facebook has removed were hosting a political rally next month that they pinned on Black Lives Matter, Antifa, and other organizations, according to third-party event websites that scraped the now-removed Facebook event…",
+    "url": "https://techcrunch.com/2018/07/31/false-flag-events/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/07/False-Flag-No-Unite-The-Right-2.jpg?w=741",
+    "publishedAt": "2018-07-31T19:21:16Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Meri Beckwith",
+    "title": "Digital therapeutics are just what the doctor ordered for patients -- and for global healthcare systems",
+    "description": "It would be hard to argue that digital products have a net-positive impact on our health. Most are designed to provide the same dopamine hit as a slot machine. But this habit-forming power of digital products can be used for therapeutic benefit too, often by …",
+    "url": "https://techcrunch.com/2018/07/31/why-digital-therapeutics-are-just-what-the-doctor-ordered-for-patients-and-for-global-healthcare-systems/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2015/03/unnamed91.jpg?w=600",
+    "publishedAt": "2018-07-31T19:00:30Z"
+  }, {
+    "source": {
+      "id": "techcrunch",
+      "name": "TechCrunch"
+    },
+    "author": "Brian Heater",
+    "title": "Can Electronauts help make VR more social?",
+    "description": "Virtual reality is an isolating experience. You power it up, strap the headset on and just sort of drift off into your own world. But maybe that doesn’t have to be the case. Maybe there’s a way to slip into a virtual world and still interact with your surroun…",
+    "url": "https://techcrunch.com/2018/07/31/can-electronauts-help-make-vr-more-social/",
+    "urlToImage": "https://techcrunch.com/wp-content/uploads/2018/07/l__iNh2r.jpg?w=711",
+    "publishedAt": "2018-07-31T19:00:16Z"
+  }]
+}

@@ -1,0 +1,65 @@
+{{#if panelControls}}
+    <div class="panel">
+        <div class="tabcontrols">
+            <div class="tabs" role="tablist" aria-orientation="horizontal">
+            </div>
+            <div class="controls">
+                <div class="icon gadgetlist" role="button" aria-haspopup="true" aria-expanded="false" tabindex="0"
+                     title="{{items.GADGETS-ON-PANEL}}">
+                     <i class="material-icons md-light">expand_more</i></div>
+            </div>
+        </div>
+        <div class="content"></div>
+        <div class="dropIndicator"></div>
+    </div>
+{{/if}}
+
+{{#if gadgetTab}}
+    <div class="tab zaz-effect zaz-effect-bar-bottom" tabindex="0" role="tab" aria-selected="false">
+        <div class="tab-start"></div>
+        <div class="tab-icon"><i class="material-icons md-light">home</i></div>
+        <div class="tab-title" tabindex="0"></div>
+        <div class="tab-count">0</div>
+        <div class="tab-end"></div>
+    </div>
+{{/if}}
+
+{{#if gadgetListMenu}}
+    <div class="zaz-menu gadgetlistmenu" aria-hidden="false">
+        <div class="items">
+        </div>
+    </div>
+{{/if}}
+
+{{#if gadgetsOverlay}}
+    <div class="zaz-overlay gadgets-overlay" role="dialog" tabindex="0">
+        <div class="zaz-overlay-header">
+            <div class="left">
+                <div class="zaz-overlay-header-title" tabindex="0" aria-label="Gadgets">
+                    Open Gadget(s)</div>
+            </div>
+            <div class="right">
+                <i class="material-icons md-light zaz-overlay-header-close" tabindex="0" role="button" title="Close">close</i>
+            </div>
+        </div>
+        <div class="zaz-overlay-content">
+            <div class="gadgets"></div>
+        </div>
+        <div class="zaz-overlay-footer">
+            <div class="left"></div>
+            <div class="right">
+                <button class="button zaz-effect zaz-effect-bar-bottom default" data-action="close">Close</button>
+            </div>
+        </div>
+    </div>
+{{/if}}
+
+{{#if gadgetsOverlayItem}}
+    <div class="item zaz-effect zaz-effect-bar-left-top-to-bottom" tabindex="0" aria-label="open gadget {{title}}" data-gadget="{{script}}">
+        <i class="material-icons md-light icon-class {{iconClass}}">{{icon}}</i>
+        <div class="item-meta">
+            <div class="item-title">{{title}}</div>
+            <div class="item-desc">{{desc}}</div>
+        </div>
+    </div>
+{{/if}}

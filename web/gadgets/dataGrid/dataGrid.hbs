@@ -1,0 +1,29 @@
+{{#if main}} 
+<div class="container zaz-effect zaz-effect-bar-top">
+    <div class="controls">
+        <div class="controls-bar">
+            <div class="filters-selector">                
+            </div>
+        </div>
+        <div class="controls-bar">
+            <div class="filters"> </div>
+        </div>
+    </div>
+    <div class="grid"></div>
+</div>
+{{/if}}
+
+{{#if blnFilters}} 
+{{#each filters}}
+    <div class="filter {{#unless @index}}active{{/unless}}" data-filter="{{@key}}">{{@key}}<span class="count">{{this.length}}</span></div>
+{{/each}} 
+{{/if}}
+
+
+{{#if blnColumns}} 
+    <select>
+        {{#each columns}}
+            <option {{#unless @index}}selected{{/unless}} data-filter="{{@key}}">{{@key}}</option>
+        {{/each}} 
+    </select>
+{{/if}}

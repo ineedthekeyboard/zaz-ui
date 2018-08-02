@@ -1,0 +1,22 @@
+{{#if mainZone}}
+    <div class="zone" data-zone="main">
+        <div class="zone-help">{{items.MAIN-ZONE-MESSAGE}}</div>
+    </div>
+{{/if}} 
+
+{{#if subZone}} 
+    {{#if isVertical}}
+        <div class="zone top" data-meta="top" data-zone="{{parentZone}}-top">
+        </div>
+    {{else}}
+        <div class="zone left" data-meta="left" data-zone="{{parentZone}}-left">
+        </div>
+    {{/if}}
+    {{#if isVertical}}
+        <div class="zone bottom" data-meta="bottom" data-zone="{{parentZone}}-bottom">
+        </div>
+    {{else}}
+        <div class="zone right" data-meta="right" data-zone="{{parentZone}}-right">
+        </div>
+    {{/if}}
+{{/if}}

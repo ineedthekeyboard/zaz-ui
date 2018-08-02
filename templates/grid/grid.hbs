@@ -1,0 +1,24 @@
+{{#if main}}
+<div class="container zaz-effect zaz-effect-bar-top">
+    <div class="controls">
+        <div class="controls-bar" style="flex:1">
+            <div class="message" style="white-space: nowrap;">
+                {gadgetName} - Grid Template
+            </div>
+        </div>
+        <div class="controls-bar">
+            <div class="knobs mode">
+                <div tabindex="0" class="knob active" data-mode="grid" title="View as Grid">
+                    <i class="material-icons md-light">view_stream</i>
+                    <label>Grid</label>
+                </div>
+                <div tabindex="0" class="knob"  data-mode="tile" title="View as Tiles">
+                    <i class="material-icons md-light">view_module</i>
+                    <label>Tile</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid"></div>
+</div>
+{{/if}} 

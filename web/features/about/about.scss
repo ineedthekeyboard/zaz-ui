@@ -1,0 +1,82 @@
+.about-overlay {
+    .zaz-overlay-content {
+        max-width: 750px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .left {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            .logo {
+                height: 200px;
+                width: 200px;
+                padding-right: 10px;
+                animation: swivel-logo 5s infinite alternate ease-in-out;
+                .icon {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .right {
+            div {
+                span {
+                    font-size: 14pt;
+                }
+            }
+            .about-content {
+                border-top: 1px solid #ccc;
+                padding: 20px 0;
+                font-size: 10pt;
+                .section {
+                    margin-top: 20px;
+                    padding :5px;
+                    border-radius: 5px;
+                    position: relative;
+                    .about-content-title {
+                        display: inline-block;
+                        padding: 5px 20px;
+                        color: white;
+                        border-radius: 5px;
+                        position: absolute;
+                    }
+                    &.new {
+                        background-color: rgba(0,100,0, 0.2);
+                        .about-content-title {
+                            background-color: rgb(0,100,0);
+                            top: -12px;
+                            left: 10px;
+                        }
+                    }
+                    &.coming {
+                        background-color: rgba(221, 138, 29, 0.2);
+                        .about-content-title {
+                            background-color: rgb(221, 138, 29);
+                            top: -12px;
+                            left: 35%;
+                        }
+                    }
+                    &.planned {
+                        background-color: rgba(48, 48, 195, 0.2);
+                        .about-content-title {
+                            background-color: rgb(48, 48, 195);
+                            top: -12px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes swivel-logo {
+    0% {
+        transform: perspective(500px) rotateY(-30deg);
+    }
+    100% {
+        transform: perspective(500px) rotateY(30deg);
+    }
+}

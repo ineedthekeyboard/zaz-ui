@@ -1,0 +1,19 @@
+.sampleChart {
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-bottom: none;
+        align-items: center;
+        .filters .filter {
+            box-shadow: inset 0 0 20px 0 #ccc;
+            border: 1px solid #ccc;
+        }
+    }
+    .chart {
+        flex: 1;
+        border-top: 1px solid #aaa;
+        // padding: 10px;
+        overflow: hidden;
+    }
+}

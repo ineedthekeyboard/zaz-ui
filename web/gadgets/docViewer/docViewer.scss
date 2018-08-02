@@ -1,0 +1,26 @@
+.gadget {
+        &.docViewer {
+            pointer-events: none;
+            .container {
+                overflow: hidden;
+            }
+            .controls {
+                padding: 0;
+                .controls-bar {
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    &:first-of-type {
+                        display: flex;
+                        border-bottom: 1px solid #ccc;
+                        padding: 5px;
+                    }
+                }
+            }
+            .content {
+                flex: 1;
+                border-top: 1px solid #aaa;
+                padding: 0px;
+                overflow: hidden;
+            }
+        }
+    }

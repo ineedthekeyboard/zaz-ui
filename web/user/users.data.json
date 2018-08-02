@@ -1,0 +1,16 @@
+[{
+    "userId": "m100",
+    "lastName": "100",
+    "firstName": "Mock",
+    "role": "user"
+},{
+    "userId": "m200",
+    "lastName": "200",
+    "firstName": "Mock",
+    "role": "user"
+},{
+    "userId": "m300",
+    "lastName": "300",
+    "firstName": "Mock",
+    "role": "admin"
+}]

@@ -1,0 +1,29 @@
+{
+  "name": "zaz-ui",
+  "version": "5.18.0718z",
+  "description": "Zaz UI Development Platform - Community Edition",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zazvata/zaz-ui"
+  },
+  "main": "index.html",
+  "author": "Zazvata Inc.",
+  "license": "",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-concurrent": "^0.4.1",
+    "grunt-connect-proxy": "0.1.4",
+    "grunt-contrib-connect": "^0.9.0",
+    "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-newer": "^1.3.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-war": "0.4.8",
+    "ink-docstrap": "^1.3.2",
+    "matchdep": "^0.3.0",
+    "prompt": "^1.0.0",
+    "replace": "^0.3.0",
+    "time-grunt": "^1.1.1"
+  }
+}

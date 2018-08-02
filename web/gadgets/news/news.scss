@@ -1,0 +1,89 @@
+.news {
+    .controls {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        border-bottom: none;
+    }
+    .content {
+        flex: 1;
+        border-top: 1px solid #aaa;
+        padding: 10px;
+        overflow: auto;
+        display: flex;
+        .content-item {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            position: relative;
+            box-sizing: border-box;
+            .content-title {
+                padding: 5px;
+                color: #fff;
+                background-color: var(--theme-color-o8);
+            }
+            .content-desc {
+                padding: 10px;
+            }
+        }
+        &[data-mode="gallery"] {
+            flex-direction: row;
+            flex-wrap: wrap;
+            .content-item {
+                max-width: 300px;
+                margin-right: 10px;
+                .content-title {
+                    height: 50px;
+                }
+                .content-data {
+                    flex-direction: column-reverse;
+                    flex: 1;
+                    overflow: hidden;
+                    .content-image {
+                        height: 125px;
+                        padding: 10px;
+                        img {
+                            max-height: 135px;
+                        }
+                    }
+                    .content-desc {
+                        height: 135px;
+                    }
+                }
+                .content-author {
+                    position: inherit;
+                    text-align: right;
+                    padding: 5px;
+                    color: #fff;
+                    background-color: var(--theme-color-o8);
+                    height: 50px;
+                }
+            }
+        }
+        &[data-mode="list"] {
+            flex-direction: column;
+            .content-item {
+                .content-data {
+                    display: flex;
+                    flex-direction: row;
+                    .content-image {
+                        height: 75px;
+                        padding: 10px;
+                        img {
+                            height: 100%;
+                        }
+                    }
+                }
+                .content-author {
+                    position: absolute;
+                    bottom: 5px;
+                    right: 5px;
+                    padding: 5px;
+                    font-size: 80%;
+                    color: #fff;
+                    background-color: var(--theme-color-o8);
+                    border-radius: 5px 10px;
+                }
+            }
+        }
+    }
+}

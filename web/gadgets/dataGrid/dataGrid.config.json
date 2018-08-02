@@ -1,0 +1,52 @@
+[{
+    "id": "id",
+    "width": 50,
+    "fixed": true,
+    "visible": true,
+    "sortable": true,
+    "reorderable": true,
+    "resizable": true,
+    "hideable": true,
+    "sort": "asc",
+    "sortOrder": 1,
+    "searchable": false
+}, {
+    "id": "make",
+    "width": 100,
+    "visible": true,
+    "sortable": true,
+    "reorderable": true,
+    "resizable": true,
+    "hideable": true,
+    "searchable": true
+}, {
+    "id": "model",
+    "width": 200,
+    "visible": true,
+    "sortable": true,
+    "reorderable": true,
+    "resizable": true,
+    "hideable": true,
+    "searchable": true
+}, {
+    "id": "color",
+    "width": 100,
+    "visible": true,
+    "sortable": true,
+    "reorderable": true,
+    "resizable": true,
+    "hideable": true,
+    "searchable": false,
+    "cssClass": "color"
+}, {
+    "id": "cost",
+    "width": 100,
+    "visible": true,
+    "sortable": true,
+    "reorderable": true,
+    "resizable": true,
+    "hideable": true,
+    "searchable": true,
+    "cssClass": "right",
+    "summary": "average"
+}]

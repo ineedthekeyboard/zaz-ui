@@ -1,0 +1,22 @@
+body {
+    &[data-theme='steadfast'] {
+        .empty {
+            border: none;
+        }
+    }
+    &[data-theme='spacedark'] {
+        .empty {
+            border: none;
+        }
+    }
+    &[data-theme='bloodymary'] {
+        .empty {
+            border: none;
+        }
+    }
+    &[data-theme='serenemeadow'] {
+        .empty {
+            border: none;
+        }
+    }
+}

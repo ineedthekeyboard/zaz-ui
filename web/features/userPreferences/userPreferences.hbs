@@ -1,0 +1,264 @@
+{{#if main}}
+<div class="zaz-overlay userpreferences-overlay" role="dialog" tabindex="0">
+    <div class="zaz-overlay-header">
+        <div class="left">
+            <div class="zaz-overlay-header-title" tabindex="0" aria-label="User preferences dialog">User Preferences</div>
+        </div>
+        <div class="right">
+            <i class="material-icons md-light zaz-overlay-header-close" tabindex="0" role="button" title="Close">close</i>
+        </div>
+    </div>
+
+    <div class="zaz-overlay-content">
+        <div class="left">
+            <div class="items">
+                {{#if settings.panes.name.enabled}}
+                    <div class="item zaz-effect zaz-effect-bar-right active" tabindex="0" data-pane="name">Name</div> 
+                {{/if}} 
+                {{#if settings.panes.language.enabled}}
+                    <div class="item zaz-effect zaz-effect-bar-right" tabindex="0" data-pane="language">Language</div> 
+                {{/if}} 
+                {{#if settings.panes.font.enabled}}
+                    <div class="item zaz-effect zaz-effect-bar-right" tabindex="0" data-pane="font">Font</div> 
+                {{/if}} 
+                {{#if settings.panes.layout.enabled}}
+                    <div class="item zaz-effect zaz-effect-bar-right" tabindex="0" data-pane="layout">Layout</div> 
+                {{/if}}
+                {{#if settings.panes.mode.enabled}}
+                    <div class="item zaz-effect zaz-effect-bar-right" tabindex="0" data-pane="mode">Mode</div> 
+                {{/if}}
+                {{#if settings.panes.toolbar.enabled}}
+                    <div class="item zaz-effect zaz-effect-bar-right" tabindex="0" data-pane="toolbar">Toolbar</div> 
+                {{/if}}
+                {{#if settings.panes.tab.enabled}}
+                    <div class="item zaz-effect zaz-effect-bar-right" tabindex="0" data-pane="tab">Tab</div> 
+                {{/if}}
+                {{#if settings.panes.theme.enabled}}
+                    <div class="item zaz-effect zaz-effect-bar-right" tabindex="0" data-pane="theme">Theme</div> 
+                {{/if}}
+            </div>
+        </div>
+        <div class="right">
+        </div>
+    </div>
+    <div class="zaz-overlay-footer">
+        <div class="left">
+            {{#if settings.panes.resetToDefaults.enabled}}
+                <button class="button zaz-effect zaz-effect-bar-bottom" data-action="defaults">Reset to Defaults</button>
+            {{/if}} 
+            {{#if settings.panes.reset.enabled}}
+                <button class="button zaz-effect zaz-effect-bar-bottom" data-action="reset">Reset</button>
+            {{/if}}
+        </div>
+        <div class="right">
+            {{#if settings.panes.instantApply.enabled}}
+                <span class="instant">
+                    <input type="checkbox" class="instantApply"> Instant Apply
+                </span> 
+            {{/if}}
+            <button class="button zaz-effect zaz-effect-bar-bottom" data-action="cancel">Cancel</button>
+            <button class="button zaz-effect zaz-effect-bar-bottom default" data-action="apply">Apply Changes</button>
+        </div>
+    </div>
+</div>
+{{/if}} {{#if name}}
+<div class="pane" data-pane="name" tabindex="0" role="region" aria-hidden="false" aria-label="Name Format Pane">
+    <div class="header">Choose a Name Format</div>
+    <table border="0" cellpadding="5">
+        <tr>
+            <td class="title">Format </td>
+            <td>
+                <select role="listbox" class="nameFormat" data-key="nameFormat" aria-label="Name Format">
+                    {{#each settings.nameFormats}} 
+                        {{#unless this.disabled}}
+                            <option value="{{value}}">{{label}}</option>
+                        {{/unless}} 
+                    {{/each}}
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
+{{/if}} {{#if language}}
+<div class="pane" data-pane="language" tabindex="0" role="region" aria-hidden="false" aria-label="Language Pane">
+    <div class="header">Choose a Language</div>
+    <table border="0" cellpadding="5">
+        <tr>
+            <td class="title">Select Language </td>
+            <td>
+                <select role="listbox" class="language" data-key="language" aria-label="Language Settings">
+                    {{#each settings.languages}} 
+                        {{#unless this.disabled}}
+                            <option value="{{value}}">{{label}}</option>
+                        {{/unless}} 
+                    {{/each}}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="flags">
+                    {{#each settings.languages}} 
+                        {{#unless this.disabled}}
+                        <div class="flag large" data-lang="{{value}}" title="ISO 639-1 Code for {{label}} is {{value}}">
+                            <div class="icon"></div>
+                            <label>{{label}}</label>
+                        </div>
+                        {{/unless}} 
+                    {{/each}}
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+{{/if}} {{#if font}}
+<div class="pane" data-pane="font" tabindex="0" role="region" aria-hidden="false" aria-label="Font Pane">
+    <div class="header">Change Font Settings</div>
+    <table border="0" cellpadding="5">
+        <tr>
+            <td class="title">Family/Size</td>
+            <td>
+                <select role="listbox" class="family" data-key="family" aria-label="Font settings">
+                    {{#each settings.systemFonts}} {{#unless this.disabled}}
+                    <option value="{{value}}">{{label}}</option>{{/unless}} {{/each}}
+                </select>
+            </td>
+            <td style="width:100px;">
+                <select role="listbox" class="size" data-key="size" aria-label="Font size setting">
+                    {{#each settings.systemFontSizes}} {{#unless this.disabled}}
+                    <option value="{{value}}">{{label}}</option>
+                    {{/unless}} {{/each}}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">Weight/Style </td>
+            <td>
+                <input type="checkbox" class="weight" data-key="weight" aria-label="Apply Bold Font">
+                <label>Bold</label>
+            </td>
+            <td>
+                <input type="checkbox" class="style" data-key="style" aria-label="Apply Italic Style">
+                <label>Italics</label>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">Color </td>
+            <td colspan="2">
+                <input type="text" class="color" data-key="color" aria-label="Select Color">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+                <input type="text" class="wheelFontColor" data-wcp-layout="block" data-wcp-format="css" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="fontPreview">
+                <div>The quick brown fox jumps over the lazy dog.</div>
+            </td>
+        </tr>
+    </table>
+</div>
+{{/if}} {{#if layout}}
+<div class="pane" data-pane="layout" tabindex="0" role="region" aria-hidden="false" aria-label="Layout Pane">
+    <div class="header">Settings for Layout</div>
+    <table border="0" cellpadding="5">
+        {{#if settings.panes.layout.options.tab}}
+        <tr>
+            <td class="title">Show Tabs</td>
+            <td>
+                <input type="checkbox" class="tab" data-key="tab" aria-label="Toggle Tabs">
+            </td>
+        </tr>
+        {{/if}} {{#if settings.panes.layout.options.toolbar}}
+        <tr>
+            <td class="title">Show Toolbar</td>
+            <td>
+                <input type="checkbox" class="toolbar" data-key="toolbar" aria-label="Toggle Toolbar">
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+</div>
+{{/if}} {{#if mode}}
+<div class="pane" data-pane="mode" tabindex="0" role="region" aria-hidden="false" aria-label="Mode Pane">
+    <div class="header">Choose a View Mode</div>
+    <table border="0" cellpadding="5">
+        {{#if settings.panes.mode}}
+        <tr>
+            <td class="title">Mode</td>
+            <td>
+                <select role="listbox" class="mode" data-key="mode" aria-label="Mode">
+                    {{#each settings.mode}} {{#unless this.disabled}}
+                    <option value="{{value}}">{{label}}</option>{{/unless}} {{/each}}
+                </select>
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+</div>
+{{/if}} {{#if toolbar}}
+<div class="pane" data-pane="toolbar" tabindex="0" role="region" aria-hidden="false" aria-label="Toolbar Pane">
+    <div class="header">Choose a Toolbar Style</div>
+    <table border="0" cellpadding="5">
+        {{#if settings.panes.toolbar}}
+        <tr>
+            <td class="title">Toolbar</td>
+            <td>
+                <select role="listbox" class="toolbar" data-key="toolbar" aria-label="Tab">
+                    {{#each settings.toolbar}} {{#unless this.disabled}}
+                    <option value="{{value}}">{{label}}</option>{{/unless}} {{/each}}
+                </select>
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+</div>
+{{/if}}{{#if tab}}
+<div class="pane" data-pane="tab" tabindex="0" role="region" aria-hidden="false" aria-label="Tab Pane">
+    <div class="header">Choose a Tab Style</div>
+    <table border="0" cellpadding="5">
+        {{#if settings.panes.tab}}
+        <tr>
+            <td class="title">Tab</td>
+            <td>
+                <select role="listbox" class="tab" data-key="tab" aria-label="Tab">
+                    {{#each settings.tab}} {{#unless this.disabled}}
+                    <option value="{{value}}">{{label}}</option>{{/unless}} {{/each}}
+                </select>
+            </td>
+        </tr>
+        {{/if}}
+    </table>
+</div>
+{{/if}}{{#if theme}}
+<div class="pane" data-pane="theme" tabindex="0" role="region" aria-hidden="false" aria-label="Theme Pane">
+    <div class="header">Choose a Theme</div>
+    <table border="0" cellpadding="5">
+        <tr>
+            <td class="title">Theme</td>
+            <td>
+                <select role="listbox" class="theme" data-key="theme" aria-label="Theme" data-description="">
+                    {{#each settings.themes}} {{#unless this.disabled}}
+                    <option value="{{value}}" data-themecolor="{{themecolor}}" data-description="{{description}}">{{label}}</option>{{/unless}} {{/each}}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="title">Theme Color </td>
+            <td>
+                <input type="text" class="themeColor" data-key="themeColor" aria-label="Select Color">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="text" class="wheelThemeColor" data-wcp-layout="block" data-wcp-format="css" />
+            </td>
+        </tr>
+    </table>
+
+</div>
+{{/if}}

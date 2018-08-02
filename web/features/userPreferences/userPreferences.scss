@@ -1,0 +1,109 @@
+.zaz-overlay {
+    &.userpreferences-overlay {
+        font-family: Arial;
+        font-size: 10pt;
+        font-style: normal;
+        font-weight: normal;
+        color: #000;
+        .zaz-overlay-content {
+            height: 500px;
+            display: flex;
+            padding: 0px;
+            .left {
+                width: 200px;
+                border-right: 1px solid #ccc;
+                position: relative;
+                .items {
+                    padding: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    .item {
+                        cursor: pointer;
+                        padding: 10px;
+                        outline: none;
+                        transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+                        background-color: #eee;
+                        border-bottom: 1px solid #ccc;
+                        transition: all 0.4s ease-in-out;
+                        &:first-child {
+                            border-top: 1px solid #ccc;
+                        }
+                        &.active {
+                            // background-color: RGB(var(--theme-color));
+                            // color: #fff;
+                            // opacity: 0.8;
+                        }
+                    }
+                }
+            }
+            .right {
+                width: 500px;
+                position: relative;
+                .pane {
+                    bottom: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0; //outline: none;
+                    overflow: hidden;
+                    transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+                    >.header {
+                        padding: 10px;
+                        background-color: #eee;
+                        border-bottom: 1px solid #ccc;
+                    }
+                    table {
+                        border: none;
+                        width: 95%;
+                        margin: 10px;
+                        .title {
+                            width: 125px;
+                            padding: 10px 0 10px 0;
+                            vertical-align: top;
+                        }
+                        .value {
+                            width: 100%;
+                        }
+                    }
+                    .fontPreview {
+                        div {
+                            border: 1px solid #ddd;
+                            height: 100px;
+                            margin-top: 10px;
+                            overflow: hidden;
+                            padding: 5px;
+                            width: 450px;
+                        }
+                    }
+                    .flags {
+                        .flag {
+                            display: inline-block;
+                            width: 88px;
+                            height: 102px;
+                            text-align: center;
+                            cursor: pointer;
+                            .icon {
+                                height: 64px;
+                                width: 64px;
+                                margin: auto;
+                            }
+                            label {
+                                padding: 3px 10px;
+                                background-color: #f5f5f5;
+                                border-radius: 5px;
+                                box-shadow: 0px 0px 1px #666;
+                                font-size: 90%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .zaz-overlay-footer {
+            .instant {
+                color: #000000;
+                margin-right: 10px;
+            }
+        }
+    }
+}

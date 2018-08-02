@@ -1,0 +1,10 @@
+{{#each data}}
+    <div class="content-item">
+        <div class="content-title">{{{title}}}</div>
+        <div class="content-data">
+            <div class="content-image"><img src="{{urlToImage}}" /></div>
+            <div class="content-desc">{{{description}}}&nbsp;<a href="{{url}}" target="_new">read more</a></div>
+        </div>
+        <div class="content-author">{{{author}}}</div>
+    </div>
+{{/each}}

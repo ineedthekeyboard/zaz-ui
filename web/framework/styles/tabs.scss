@@ -1,0 +1,324 @@
+.__layout {
+    .zone {
+        .panel {
+            .tabcontrols {
+                margin: 15px;
+                margin-bottom: 0;
+                display: flex;
+                flex-direction: row;
+                >.controls {
+                    align-self: flex-end;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 7px;
+                    background-color: var(--theme-color-o8);
+                    border-radius: 0 8px 0 0;
+                    align-items: center;
+                    .icon {
+                        cursor: pointer;
+                    }
+                }
+                .tabs {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    &:hover {
+                        cursor: move;
+                    }
+                    .tab {
+                        display: flex;
+                        background-color: var(--theme-color-o8);
+                        border-radius: 8px 8px 0 0;
+                        margin-right: 10px;
+                        padding: 10px;
+                        transition: all 0.3s ease-in-out;
+                        min-width: 165px;
+                        cursor: pointer;
+                        i {
+                            font-size: 20px;
+                            vertical-align: middle;
+                        }
+                        div {
+                            margin-right: 5px;
+                            display: inline-block;
+                            align-self: center;
+                            &:last-child {
+                                margin-right: 0px;
+                            }
+                        }
+                        &.shake {
+                            animation: shake 1s ease-in-out 0.2s 2;
+                        }
+                        &:first-of-type {
+                            margin-left: 10px;
+                        }
+                        &:not(.active) {
+                            color: #fff;
+                            i {
+                                color: #fff;
+                            }
+                        }
+                        &.active {
+                            background-color: #ffffff !important;
+                            .tab-close,
+                            .tab-pin {
+                                i {
+                                    color: #333;
+                                }
+                            }
+                        }
+                        .tab-start,
+                        .tab-end {
+                            width: 2px;
+                        }
+                        .tab-pin {
+                            display: none;
+                            &.show {
+                                display: inline-block;
+                            }
+                            &.pinned {
+                                filter: hue-rotate(115deg);
+                            }
+                        }
+                        .tab-title {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: inline-block;
+                            flex: 1;
+                        }
+                        .tab-count {
+                            display: none;
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            background-color: #fff;
+                            padding: 2px 5px;
+                            color: #666666;
+                            font-size: 80%;
+                            &.show {
+                                display: inline-block;
+                            }
+                        }
+                        .tab-close {
+                            display: none;
+                            transition: all 0.2s ease-in-out;
+                            margin-right: 0;
+                            &.show {
+                                display: inline-block;
+                            }
+                            &:hover,
+                            &:focus {
+                                transform: rotate(90deg);
+                            }
+                        }
+                        .dropIcon {
+                            background: url(../images/framework.png) no-repeat scroll 2px -37px transparent;
+                            width: 12px;
+                            height: 12px;
+                            position: absolute;
+                            z-index: 1;
+                            &.right {
+                                right: 8px;
+                                top: 0;
+                            }
+                            .left {
+                                left: 3px;
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .content {
+                flex: 1;
+                position: relative;
+            }
+        }
+    }
+}
+
+body {
+    &[data-mode="city"] {
+        .__layout {
+            .zone {
+                .panel {
+                    .tabcontrols {
+                        margin: 10px;
+                        .tabs {
+                            .tab {
+                                padding: 5px;
+                                i {
+                                    font-size: 16px;
+                                }
+                                div {
+                                    margin-right: 5px;
+                                }
+                                .tab-start,
+                                .tab-end,
+                                .tab-close {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        .controls {
+                            i {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &[data-mode="town"] {
+        .__layout {
+            .zone {
+                .panel {
+                    .tabcontrols {
+                        margin: 15px;
+                        .tabs {
+                            .tab {
+                                padding: 8px;
+                                i {
+                                    font-size: 20px;
+                                }
+                                div {
+                                    margin-right: 8px;
+                                }
+                                .tab-start,
+                                .tab-end,
+                                .tab-close {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        .controls {
+                            i {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &[data-mode="country"] {
+        .__layout {
+            .zone {
+                .panel {
+                    .tabcontrols {
+                        margin: 20px;
+                        .tabs {
+                            .tab {
+                                padding: 10px;
+                                i {
+                                    font-size: 24px;
+                                }
+                                div {
+                                    margin-right: 10px;
+                                }
+                                .tab-start,
+                                .tab-end,
+                                .tab-close {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        .controls {
+                            i {
+                                font-size: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &[data-tab='default'] {
+        .__layout {
+            .zone {
+                .panel {
+                    .tabcontrols {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    &[data-tab='flat'] {
+        .__layout {
+            .zone {
+                .panel {
+                    .tabcontrols {
+                        margin-bottom: 0;
+                        >.controls {
+                            border-radius: 0;
+                        }
+                        .tabs {
+                            .tab {
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                    .container {
+                        border-style: solid;
+                        border-width: 0px;
+                        border-color: RGB(var(--theme-color));
+                        border-top-width: 5px;
+                    }
+                }
+            }
+        }
+    }
+    &[data-tab='float'] {
+        .__layout {
+            .zone {
+                .panel {
+                    .tabcontrols {
+                        >.controls {
+                            border-radius: 10px 0 0 0;
+                        }
+                        .tabs {
+                            .tab {
+                                border-radius: 10px 0 0 0;
+                                &:first-of-type {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &[data-mobile="yes"] {
+        .zone {
+            .panel {
+                .tabcontrols {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+body {
+    &.no-tab {
+        .__layout {
+            .zone {
+                .panel {
+                    .tabcontrols {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+}

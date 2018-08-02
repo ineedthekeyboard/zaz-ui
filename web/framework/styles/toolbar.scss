@@ -1,0 +1,103 @@
+.__toolbar {
+    background-color: var(--theme-color-o8);
+    display: flex;
+    .standard,
+    .mobile {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+    .mobile {
+        display: none;
+    }
+}
+
+body {
+    &.no-toolbar {
+        .__arrangement {
+            .__toolbar {
+                display: none !important;
+            }
+        }
+    }
+    .__arrangement {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    &[data-toolbar="top"] {
+        .__arrangement {
+            flex-direction: column;
+            .__toolbar {
+                flex-direction: column;
+                .standard {
+                    .knobs {
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+    }
+    &[data-toolbar="bottom"] {
+        .__arrangement {
+            flex-direction: column-reverse;
+            .__toolbar {
+                flex-direction: column;
+                .standard {
+                    .knobs {
+                        flex-direction: row;
+                    }
+                }
+            }
+        }
+    }
+    &[data-toolbar="left"] {
+        .__arrangement {
+            flex-direction: row;
+            .__toolbar {
+                display: flex;
+                flex-direction: row;
+                .standard {
+                    flex-direction: column;
+                    .knobs {
+                        flex-direction: column;
+                    }
+                }
+
+            }
+        }
+    }
+    &[data-toolbar="right"] {
+        .__arrangement {
+            flex-direction: row-reverse;
+            .__toolbar {
+                display: flex;
+                flex-direction: row;
+                .standard {
+                    flex-direction: column;
+                    .knobs {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    &[data-mobile="yes"] {
+        .__arrangement {
+            flex-direction: column;
+            .__toolbar {
+                .standard {
+                    display: none;
+                }
+                .mobile {
+                    width: 100%;
+                    display: flex;
+                }
+            }
+        }
+    }
+}

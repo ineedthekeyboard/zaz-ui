@@ -1,0 +1,36 @@
+.gadget {
+        &.{gadgetName} {
+            .container {
+                overflow: hidden;
+            }
+            .controls {
+                padding: 0;
+                .message {
+                    color: RGB(var(--theme-color));
+                    line-height: 22px;
+                }
+                .controls-bar {
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    &:first-of-type {
+                        display: flex;
+                        border-bottom: 1px solid #ccc;
+                        padding: 5px;
+                    }
+                }
+            }
+            .content {
+                flex: 1;
+                border-top: 1px solid #aaa;
+                padding: 10px 0 10px 10px;
+                overflow: auto;
+                .address {
+                    div {
+                        padding: 5px;
+                        background-color: #ccc;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }

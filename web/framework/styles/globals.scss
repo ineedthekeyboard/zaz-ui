@@ -1,0 +1,205 @@
+html,
+body {
+    font-family: Arial;
+    font-size: 10pt;
+    background: #eee;
+    margin: 0;
+    padding: 0;
+    --theme-color: 00, 44, 88;
+    --theme-color-o2: RGBA(var(--theme-color), 0.2);
+    --theme-color-o4: RGBA(var(--theme-color), 0.4);
+    --theme-color-o6: RGBA(var(--theme-color), 0.6);
+    --theme-color-o8: RGBA(var(--theme-color), 0.8);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    &[data-lang='ar'] {
+        * {
+            text-align: right !important;
+        }
+    }
+    &[data-lang='ur'] {
+        * {
+            text-align: right !important;
+        }
+    }
+    user-select: none;
+    -ms-user-select: none;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-5px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(5px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-3px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(3px, 0, 0);
+    }
+}
+
+[draggable] {
+    user-select: none;
+}
+
+.button {
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #fefefe;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px #aaa;
+}
+
+.knobs {
+    display: flex;
+    flex-direction: row;
+    .knob {
+        padding: 15px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        outline: none;
+        position: relative;
+        &:hover,
+        &:focus,
+        &.active {
+            background-color: #fff;
+            &:not([data-type="gadget"]) {
+                i {
+                    color: var(--theme-color-o8);
+                }
+            }
+        }
+        &:not(.active) {
+            &[data-type="gadget"] {
+                background-color: #fff;
+                i {
+                    color: var(--theme-color-o8);
+                }
+                &:hover,
+                &:focus {
+                    i {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+        i {
+            font-size: 24px;
+        }
+    }
+}
+
+body {
+    &[data-mode="city"] {
+        .knobs {
+            .knob {
+                padding: 10px;
+                i {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    &[data-mode="town"] {
+        .knobs {
+            .knob {
+                padding: 14px;
+                i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    &[data-mode="country"] {
+        .knobs {
+            .knob {
+                padding: 18px;
+                i {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+
+$icon-class-pdf: darkred;
+$icon-class-chart: darkgreen;
+$icon-class-grid: blue;
+$icon-class-map: brown;
+$icon-class-news: yellowgreen;
+$icon-class-extension: rgb(255, 94, 0);
+$icon-class-web: rgb(0, 132, 255);
+
+.material-icons {
+    &.icon-class {
+        color: #ccc;
+        &.icon-class-pdf {
+            color: $icon-class-pdf;
+        }
+        &.icon-class-chart {
+            color: $icon-class-chart;
+        }
+        &.icon-class-grid {
+            color: $icon-class-grid;
+        }
+        &.icon-class-map {
+            color: $icon-class-map;
+        }
+        &.icon-class-news {
+            color: $icon-class-news;
+        }
+        &.icon-class-extension {
+            color: $icon-class-extension;
+        }
+        &.icon-class-web {
+            color: $icon-class-web;
+        }
+    }
+}
+
+.knobs {
+    .knob {
+        &:not(.active) {
+            &[data-type="gadget"] {
+                &:hover,
+                &:focus {
+                    i {
+                        &.icon-class-pdf {
+                            color: $icon-class-pdf;
+                        }
+                        &.icon-class-chart {
+                            color: $icon-class-chart;
+                        }
+                        &.icon-class-grid {
+                            color: $icon-class-grid;
+                        }
+                        &.icon-class-map {
+                            color: $icon-class-map;
+                        }
+                        &.icon-class-news {
+                            color: $icon-class-news;
+                        }
+                        &.icon-class-extension {
+                            color: $icon-class-extension;
+                        }
+                        &.icon-class-web {
+                            color: $icon-class-web;
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}
