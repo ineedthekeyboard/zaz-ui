@@ -498,7 +498,7 @@ define([
                     });
                 });
             });
-            window.setTimeout(function() {
+            window.setTimeout(function () {
                 var maxWidth = context.$body.find('tr.row:first td:first').width();
                 context.$body.find('tr.row:last td').css('max-width', maxWidth);
             }, 100);
@@ -749,7 +749,7 @@ define([
             //hashmap would result in performance here - consider changing this
             var dataRow = null;
             $(this.options.viewData).each(function (i, row) {
-                if (row.id === rowId) {
+                if (row.id.toString() === rowId.toString()) {
                     dataRow = row;
                     return false;
                 }
