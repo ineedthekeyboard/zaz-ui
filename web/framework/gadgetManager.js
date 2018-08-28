@@ -29,7 +29,7 @@ define([
         return $element;
     }
 
-    gadgetManager.meta = gadgets;
+    gadgetManager.meta = gadgets.hash;
 
     gadgetManager.open = function (gadgets) {
         if (!(gadgets instanceof Array)) {

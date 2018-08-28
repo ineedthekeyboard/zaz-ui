@@ -56,7 +56,7 @@ define([
     };
 
     index.renderGadgets = function () {
-        var gadgets = framework.pageManager.getGadgets();
+        var gadgets = settings.gadgets.getUserGadgets();
 
         framework.gadgetManager.open(gadgets);
 
