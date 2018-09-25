@@ -6,8 +6,6 @@
 
 > Go to [https://github.com/zazvata/zaz-ui](https://github.com/zazvata/zaz-ui). Clone or download Zaz UI Community Edition to a folder (ex: c:\dev\zaz-ui). This will be your application root folder.
 
-# Installation and Setup
-
 ## Install Node
 
 > Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world. Use a pre-built installer for your platform @ http://nodejs.org/download
