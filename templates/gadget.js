@@ -5,8 +5,8 @@ module.exports = function (options) {
     var gadgetType = options.type || 'simple';
     var gadgetDesc = options.desc || 'Generated ' + gadgetName + ' from template';
 
-    if (!gadgetName || gadgetName.length < 0) {
-        console.log('Please provide name of gadget! [grunt gadget --name testGadget]');
+    if (!gadgetName || gadgetName.length < 3) {
+        console.log('Please provide name of gadget! (at least 3 chars) [grunt gadget --name testGadget]');
         return;
     }
     console.log('Generating new gadget "' + gadgetName + '"');

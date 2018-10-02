@@ -13,12 +13,10 @@ define(['settings/languages'], function (languages) {
          * @returns Object of all CODE in set language
          */
         translations: function () {
-            var strDefault = 'en';
+            var strDefault = 'en',
+                strLanguage = window.language || strDefault;
 
-            var strLanguage = window.language || strDefault;
-            var objLanguage = languages[strLanguage] || languages[strDefault];
-
-            return objLanguage;
+            return languages[strLanguage] || languages[strDefault];
         },
         /**
          * @description Translate a CODE into set language
@@ -27,15 +25,11 @@ define(['settings/languages'], function (languages) {
          * @returns Value of CODE in set language
          */
         translate: function (strCode) {
-            var strDefault = 'en';
-            var strDefaultValue = '';
+            var strDefault = 'en',
+                strLanguage = window.language || strDefault,
+                objLanguage = languages[strLanguage] || languages[strDefault];
 
-            strDefaultValue = strCode.toLowerCase().replace(/[-]/g, ' ');
-            var strLanguage = window.language || strDefault;
-            var objLanguage = languages[strLanguage] || languages[strDefault];
-            var strValue = objLanguage[strCode] || strCode;
-
-            return strValue;
+            return objLanguage[strCode] || strCode;
         }
     };
 

@@ -6,9 +6,10 @@ define([
         setKeyLoop: function ($parent, $child, blnTabIndex) {
             $parent.off('keyup');
             $parent.on('keyup', function (e) {
-                items = $parent.find($child);
-                var item = $parent.find(':focus'),
+                var items = $parent.find($child),
+                    item = $parent.find(':focus'),
                     pos;
+
                 switch (e.keyCode) {
                     case $.ui.keyCode.LEFT:
                         e.preventDefault();

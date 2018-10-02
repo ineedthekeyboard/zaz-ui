@@ -164,7 +164,7 @@ define([
                     }
                 });
 
-            sorts = sorts.sort(function (a, b) {
+            sorts.sort(function (a, b) {
                 return a.sortOrder > b.sortOrder;
             });
 
@@ -324,8 +324,7 @@ define([
         },
 
         _renderHeader: function () {
-            var strHtml = '',
-                prevColumn;
+            var strHtml = '';
 
             if (!this.options.header || this.options.mode !== 'grid') {
                 return true;
@@ -358,7 +357,6 @@ define([
                 strHtml += '<div class="sort-icon"></div>';
                 strHtml += '</div>';
                 strHtml += '</th>';
-                prevColumn = col;
             });
 
             this.$header.append('<tr>' + strHtml + '</tr>');
@@ -368,8 +366,6 @@ define([
         //#endregion
 
         _renderGrid: function () {
-            var context = this;
-
             //apply table markup
             this._renderTable();
             this._renderHeader();
@@ -397,14 +393,13 @@ define([
                 cssClass = this.options.view.grid.cssClass,
                 strClassStyle = cssClass,
                 $tr,
-                data,
-                totalRows = this.dataSet.length;
+                data;
 
             data = this.dataSet;
 
             $.each(data, function (r, row) {
                 if (cssClass && cssClass.indexOf('#') > -1) {
-                    for (key in row) {
+                    for (var key in row) {
                         if (row.hasOwnProperty(key) && cssClass.indexOf('#' + key + '#') > -1) {
                             strClassStyle = cssClass.replace('#' + key + '#', row[key]);
                         }
@@ -429,7 +424,6 @@ define([
 
         _renderCell: function (row, column) {
             var cellHtml,
-                rowHeight = this.options.view.grid.height,
                 styleFormat = this.options.view.grid.styleFormat,
                 strFormatStyle = styleFormat,
                 strWidthStyle = 'width:' + column.width + 'px;',
@@ -453,7 +447,6 @@ define([
 
         _renderTileRows: function () {
             var context = this,
-                columns = this.options.columns,
                 tileHeight = this.options.view.tile.height,
                 strHeightStyle = 'height:' + tileHeight + 'px;',
                 styleFormat = this.options.view.tile.styleFormat,
@@ -461,19 +454,17 @@ define([
                 cssClass = this.options.view.tile.cssClass,
                 strClassStyle = cssClass,
                 strWidthStyle = 'min-width:' + this.options.view.tile.minWidth + 'px;',
-                data,
-                totalRows = this.dataSet.length;
+                data;
 
             data = this.dataSet;
 
             $.each(data, function (r, row) {
-                var $tr = '',
-                    $cell;
+                var $tr;
 
                 $tr = $('<tr role="row" class="row" style="' + strHeightStyle + '"></tr>');
                 context.$body.append($tr);
                 $.each(row, function (i, rowItem) {
-                    var key;
+                    var key, $td, $cell;
                     if (styleFormat && styleFormat.indexOf('#') > -1) {
                         for (key in rowItem) {
                             if (rowItem.hasOwnProperty(key) && styleFormat.indexOf('#' + key + '#') > -1) {
@@ -560,8 +551,7 @@ define([
         //#endregion
 
         _renderData: function () {
-            var context = this,
-                page, pageSize, start, end, data;
+            var page, pageSize, start, end, data;
 
             page = this.options.pages.page;
             pageSize = this.options.pages.enabled ? this.options.pages.size : this.options.data.length;
@@ -578,12 +568,7 @@ define([
         },
 
         _updateDataSet: function (data) {
-            var context = this,
-                viewHeight = 0,
-                totalRows = 0,
-                rowHeight = 0,
-                totalHeight = 0,
-                padding = 0;
+            var context = this;
 
             this.dataSet = data;
 
@@ -610,9 +595,7 @@ define([
         },
 
         _renderRows: function () {
-            var context = this,
-                data = this.dataSet,
-                intScroll;
+            var context = this;
 
             // only remove data rows
             this.$body.find('tr.row').remove();
@@ -621,7 +604,7 @@ define([
                 context._renderGridRows();
             } else {
                 context._renderTileRows();
-            };
+            }
 
             // intScroll = this.scrollSign ? this.scrollSign * this.$body.height() : 0;
             // this.$body.scrollTop(intScroll);
@@ -663,7 +646,7 @@ define([
         _updateControls: function () {
             var context = this;
 
-            setPagedData = function ($control) {
+            var setPagedData = function ($control) {
                 var page = context.options.pages.page,
                     size = context.options.pages.size,
                     total = context.options.viewData.length,
@@ -675,11 +658,12 @@ define([
                 $control.find('.total').html(total);
                 $control.find('.page-sizes').val(size);
                 $control.find('.page-current').html(page);
-            }
+            };
 
-            update = function ($control) {
+            var update = function ($control) {
                 setPagedData($control);
-            }
+            };
+
             if (this.$controls1) {
                 update(this.$controls1);
             }
@@ -759,8 +743,7 @@ define([
 
         _resize: function (blnLoadData) {
             var intTop = 0,
-                intBottom = 0,
-                intControlsTop = 0;
+                intBottom = 0;
 
             //get heights of all headers and footers
             //if (!window.isChrome) {
@@ -812,8 +795,7 @@ define([
         },
 
         _bindListeners: function () {
-            var context = this,
-                lastScrollTop = 0;
+            var context = this;
 
             $(window).on('resized', function () {
                 context._resize(true);
@@ -846,6 +828,7 @@ define([
                         case keys.ENTER:
                         case keys.SPACE:
                             context._handlePage('page-next');
+                            break;
                         default:
                             break;
                     }

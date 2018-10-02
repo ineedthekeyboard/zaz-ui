@@ -46,9 +46,11 @@ define([
         },
 
         bindListeners: function () {
+            var $body = $(body);
+
             // bind hotkeys
-            $('body').off('keyup.hotkey');
-            $('body').on('keyup.hotkey', function (e) {
+            $body.off('keyup.hotkey');
+            $body.on('keyup.hotkey', function (e) {
                 var altStr = e.altKey ? 'alt' : null,
                     ctrlStr = e.ctrlKey ? 'ctrl' : null,
                     shiftStr = e.shiftKey ? 'shift' : null,

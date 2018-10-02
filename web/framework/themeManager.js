@@ -18,6 +18,7 @@ define([
             var $themeStyles,
                 arrStyles = [],
                 colorStyles,
+                colorStyles08,
                 rgbStyles,
                 borderStyles,
                 rgbaBorderStyles04,

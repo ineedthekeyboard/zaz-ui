@@ -96,7 +96,6 @@ define([
         _open: function () {
             var $element = $(this.options.selector),
                 $menu = this.element,
-                items = $menu.find('[tabindex=0]'),
                 context = this;
 
             //set aria-expanded attribute for strSelector
@@ -116,8 +115,7 @@ define([
         },
 
         _bindListeners: function () {
-            var $element = $(this.options.selector),
-                $menu = this.element,
+            var $menu = this.element,
                 items = $menu.find('[tabindex=0]'),
                 context = this;
 
@@ -207,8 +205,7 @@ define([
 
         _close: function () {
             var $element = $(this.options.selector),
-                $menu = this.element,
-                context = this;
+                $menu = this.element;
 
             $menu.attr('aria-hidden', 'true');
             $menu.hide();

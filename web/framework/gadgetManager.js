@@ -32,6 +32,8 @@ define([
     gadgetManager.meta = gadgets.hash;
 
     gadgetManager.open = function (gadgets) {
+        var gadget0;
+
         if (!(gadgets instanceof Array)) {
             gadgets = [gadgets];
         }
@@ -127,7 +129,7 @@ define([
         });
 
         function addGadget(gadget, blnLastGadget) {
-            var blnAdded, gadgets, options, metaOptions, strTitle;
+            var blnAdded, options, metaOptions, strTitle;
 
             /* extend merged options with defaults, settings and metadata */
             options = $.extend(true, {}, defaults, gadget, gadgetManager.meta[gadget.script]);
@@ -175,8 +177,7 @@ define([
     };
 
     gadgetManager.focusOrActivateTab = function (options) {
-        var $tab = gadgetManager.getTab(options.script, options.data),
-            zone = $tab.closest('.zone').attr('data-zone');
+        var $tab = gadgetManager.getTab(options.script, options.data);
 
         if ($tab.length) {
             $tab.click();
@@ -454,8 +455,7 @@ define([
 
     gadgetManager.bindListeners = function () {
         var context = this,
-            $layout = layoutManager.$layout,
-            elemLayout;
+            $layout = layoutManager.$layout;
 
         $(window).on(globals.NAMESPACE + '-message', function (e) {
             var message = e.message,
@@ -708,8 +708,6 @@ define([
     };
 
     gadgetManager.showGadgetOpener = function (strScript) {
-        var options = gadgetManager.getGadgetOptions(strScript);
-
         //if mobile just open the gadget directly on main zone
         if (window.mobile) {
             gadgetManager.open([{

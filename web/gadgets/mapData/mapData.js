@@ -72,17 +72,6 @@ define([
             this.map.panTo(center);
         },
 
-        _receiveMessage: function (e) {
-            var message = e.message;
-
-            switch (message.action) {
-                case 'MESSAGE-grid-data':
-                    break;
-                default:
-                    break;
-            }
-        },
-
         _create: function () {
             this._super();
             this._renderLayout();

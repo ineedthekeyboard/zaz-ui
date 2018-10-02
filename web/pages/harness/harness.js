@@ -25,7 +25,7 @@ define([
         },
 
         loadGadget: function () {
-            var $gadget = this.$harness.find('.gadget'),
+            var $gadget,
                 strScript = uriManager.getHash('gadget');
 
             this.unloadGadget();

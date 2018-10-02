@@ -24,19 +24,6 @@ define([
             }
         },
 
-        _receiveMessage: function (e) {
-            var message = e.message,
-                options = message.options;
-
-            switch (message.action) {
-                case 'MESSAGE-server-message':
-                    break;
-                    break;
-                default:
-                    break;
-            }
-        },
-
         _create: function () {
             this._super();
             this._renderLayout();
@@ -84,8 +71,7 @@ define([
         },
 
         _renderData: function () {
-            var context = this,
-                columns = {
+            var columns = {
                     chart: {
                         type: 'column',
                         options3d: {

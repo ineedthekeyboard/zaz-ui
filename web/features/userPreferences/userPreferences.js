@@ -287,9 +287,7 @@ define([
 
         setValues: function (blnApply) {
             var context = this,
-                $elements = this.$overlay && this.$overlay.find('[data-key]'),
-                $body = $('body'),
-                themeColor;
+                $elements = this.$overlay && this.$overlay.find('[data-key]');
 
             $.each($elements, function (i, element) {
                 var $element = $(element),
@@ -340,7 +338,8 @@ define([
 
         applyTheme: function () {
             var context = this,
-                $body = $('body');
+                $body = $('body'),
+                themeColor;
 
             context.loadPreferences();
 
