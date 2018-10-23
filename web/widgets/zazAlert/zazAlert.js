@@ -41,7 +41,7 @@ define([
         buttonClickHandler: function (e, action) {
             if (action === 'ok') {
                 this._alert.close();
-            };
+            }
         }
     };
 });

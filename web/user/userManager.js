@@ -61,16 +61,13 @@ define([
         },
 
         fetchPreferences: function () {
-            var context = this, 
-            deferred = new $.Deferred();
+            var deferred = new $.Deferred();
 
             preferencesManager.get({
                 key: ''
             }).always(function (response) {
                 var data = (response.length) ? response : [],
-                    preferences = {},
-                    themeColor,
-                    $body = $('body');
+                    preferences = {};
 
                 if (data) {
                     $(data).each(function (i, row) {

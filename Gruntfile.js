@@ -168,7 +168,7 @@ module.exports = function (grunt) {
     grunt.registerTask('package', ['handlebars', 'war']);
     grunt.registerTask('serve', ['sass', 'handlebars', 'concurrent:target']);
     grunt.registerTask('default', ['serve']);
-    grunt.registerTask('h', function() {
+    grunt.registerTask('heroku', function() {
         grunt.option('proxy', 'heroku');
         grunt.task.run('serve');
     });

@@ -59,15 +59,11 @@ define([
                     action = message && message.action,
                     options = message && message.options;
 
-                    switch (action) {
-                        case 'MESSAGE-hotkey-pressed':
-                            if (options && options.key === 'alt+A') {
-                                context.show();
-                            }
-                            break;
-                        default:
-                            break;
+                if (action === 'MESSAGE-hotkey-pressed') {
+                    if (options && options.key === 'alt+A') {
+                        context.show();
                     }
+                }
             });
         }
     };

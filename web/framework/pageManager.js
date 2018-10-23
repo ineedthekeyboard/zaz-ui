@@ -37,7 +37,7 @@ define([
         },
 
         toggleMode: function () {
-            var strMmode,
+            var strMode,
                 currentMode = storageManager.getStorageItem(settings.globals.NAMESPACE + '-mode');
 
             strMode = (currentMode === 'mobile') ? 'desktop' : 'mobile';
@@ -46,9 +46,11 @@ define([
         },
 
         bindListeners: function () {
+            var $body = $(body);
+
             // bind hotkeys
-            $('body').off('keyup.hotkey');
-            $('body').on('keyup.hotkey', function (e) {
+            $body.off('keyup.hotkey');
+            $body.on('keyup.hotkey', function (e) {
                 var altStr = e.altKey ? 'alt' : null,
                     ctrlStr = e.ctrlKey ? 'ctrl' : null,
                     shiftStr = e.shiftKey ? 'shift' : null,
@@ -76,63 +78,6 @@ define([
                         break;
                 }
             });
-        },
-
-        getGadgets: function () {
-            var gadgets = [];
-
-            switch (window.user.role) {
-                case 'admin':
-                    gadgets = [{
-                            script: 'dataGrid',
-                            zone: 'main-left',
-                            active: false,
-                            window: window.name
-                        },
-                        {
-                            script: 'sampleChart',
-                            zone: 'main-right',
-                            active: true,
-                            window: window.name
-                        }
-                    ];
-                    break;
-                case 'user':
-                default:
-                    gadgets = [{
-                            script: 'dataGrid',
-                            zone: 'main-left',
-                            active: false,
-                            window: window.name
-                        },
-                        {
-                            script: 'docViewer',
-                            zone: 'main-left',
-                            active: false,
-                            window: window.name
-                        },
-                        {
-                            script: 'sampleChart',
-                            zone: 'main-right',
-                            active: true,
-                            window: window.name
-                        },
-                        {
-                            script: 'news',
-                            zone: 'main-right-bottom',
-                            active: true,
-                            window: window.name
-                        },
-                        {
-                            script: 'mapData',
-                            zone: 'main-right-bottom',
-                            active: false,
-                            window: window.name
-                        }
-                    ];
-                    break;
-            }
-            return gadgets;
         }
     };
 
