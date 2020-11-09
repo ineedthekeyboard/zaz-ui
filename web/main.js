@@ -1,4 +1,4 @@
-window.version = '5.18.0924w';
+window.version = '0.0.1';
 
 //return time stamp upto hour
 function getTimestamp() {
@@ -113,7 +113,7 @@ require([
     globals) {
 
     var defaultConfig = {
-            debug: false,
+            debug: true,
             mock: false,
             demo: false,
             sso: false

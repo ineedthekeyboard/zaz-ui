@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-    var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
+    var proxySnippet = require('grunt-connect-proxy2/lib/utils').proxyRequest;
     var proxyConfig = {
         dev: {
             host: 'localhost',
@@ -49,11 +49,13 @@ module.exports = function (grunt) {
     }
 
     function connectStatic(connect, dir) {
-        return connect.static(require('path').resolve(dir));
+        return serveStatic(require('path').resolve(dir));
     }
 
     require('time-grunt')(grunt);
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    const sass = require('node-sass');
+    const serveStatic = require('serve-static');
     //to load grunt tasks from custom js files
     //grunt.loadTasks('./templates');
 
@@ -157,6 +159,9 @@ module.exports = function (grunt) {
         },
 
         sass: {
+            options: {
+                implementation: sass
+            },
             dist: {
                 files: getCSSMap()
             }

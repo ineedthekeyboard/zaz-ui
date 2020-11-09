@@ -1,29 +1,31 @@
 {
-  "name": "zaz-ui",
-  "version": "5.18.0924w",
-  "description": "Zaz UI Development Platform - Community Edition",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zazvata/zaz-ui"
-  },
+  "name": "PeroZ",
+  "version": "0.0.1",
+  "description": "Based on the Zaz UI Development Platform",
   "main": "index.html",
-  "author": "Zazvata Inc.",
+  "author": "Ryan Carlton",
   "license": "",
+  "scripts": {
+    "start": "grunt --proxy"
+  },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-concurrent": "^0.4.1",
-    "grunt-connect-proxy": "0.1.4",
-    "grunt-contrib-connect": "^0.9.0",
+    "grunt": "^1.0.4",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-connect-proxy2": "^2.0.0",
+    "grunt-contrib-connect": "^2.0.0",
     "grunt-contrib-handlebars": "^1.0.0",
     "grunt-contrib-requirejs": "^1.0.0",
-    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-jsdoc": "^2.4.0",
     "grunt-newer": "^1.3.0",
-    "grunt-sass": "^2.0.0",
-    "grunt-war": "0.4.8",
+    "grunt-sass": "^3.0.2",
+    "grunt-war": "^0.5.1",
     "ink-docstrap": "^1.3.2",
-    "matchdep": "^0.3.0",
+    "matchdep": "^2.0.0",
+    "node-sass": "^4.12.0",
     "prompt": "^1.0.0",
-    "replace": "^0.3.0",
-    "time-grunt": "^1.1.1"
+    "replace": "^1.1.0",
+    "serve-static": "^1.13.2",
+    "time-grunt": "^2.0.0"
   }
 }
