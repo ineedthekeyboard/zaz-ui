@@ -22,7 +22,7 @@
     "grunt-war": "^0.5.1",
     "ink-docstrap": "^1.3.2",
     "matchdep": "^2.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "prompt": "^1.0.0",
     "replace": "^1.1.0",
     "serve-static": "^1.13.2",
